@@ -41,7 +41,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'pl.futurecollars.invoicing.app.App'
+    mainClass = 'pl.futurecollars.katarzyna.dunaj.App'
 }
 
 checkstyle {
