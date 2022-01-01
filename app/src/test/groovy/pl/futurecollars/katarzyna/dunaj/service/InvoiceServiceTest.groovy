@@ -11,17 +11,17 @@ import java.time.LocalDate
 
 class InvoiceServiceTest extends Specification {
 
-    def from = new Company(12345,"Ul.Ogrodowa 3, 05-085 Kampinos", "Telnet")
-    def from2= new Company(23456,"Ul.Ogrodowa 7, 05-085 Kampinos","Telnet")
-    def to= new Company( 23456,"Ul.Kwiatowa 5, 05-085 Kampinos","NetPlus")
-    def to2= new Company(76589,"Ul.Kwiatowa 5, 05-085 Kampinos","NetPlus")
+    def from = new Company(12345, "Ul.Ogrodowa 3, 05-085 Kampinos", "Telnet")
+    def from2 = new Company(23456, "Ul.Ogrodowa 7, 05-085 Kampinos", "Telnet")
+    def to = new Company(23456, "Ul.Kwiatowa 5, 05-085 Kampinos", "NetPlus")
+    def to2 = new Company(76589, "Ul.Kwiatowa 5, 05-085 Kampinos", "NetPlus")
     def date = LocalDate.of(2017, 8, 17)
-    def invoiceEntry1 = new InvoiceEntry("Cukier", BigDecimal.valueOf(20) , BigDecimal.valueOf(17), Vat.VAT_8)
+    def invoiceEntry1 = new InvoiceEntry("Cukier", BigDecimal.valueOf(20), BigDecimal.valueOf(17), Vat.VAT_8)
     def invoiceEntry2 = new InvoiceEntry("Sól", BigDecimal.valueOf(30), BigDecimal.valueOf(16), Vat.VAT_5)
     def entries = Arrays.asList(invoiceEntry1, invoiceEntry2)
     def invoice = new Invoice(date, from, to, entries)
-    def invoice2 = new Invoice(date,from2, to,entries)
-    def invoice3 = new Invoice(date,from, to2,entries)
+    def invoice2 = new Invoice(date, from2, to, entries)
+    def invoice3 = new Invoice(date, from, to2, entries)
     def invoiceUpdated = new Invoice(date, from, to, entries)
     def database = new InMemoryDatabase()
 

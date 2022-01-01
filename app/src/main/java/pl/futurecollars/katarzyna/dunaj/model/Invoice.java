@@ -7,6 +7,7 @@ import lombok.Data;
 
 @Data
 public class Invoice {
+
     private UUID id;
     private LocalDate date;
     private Company from;

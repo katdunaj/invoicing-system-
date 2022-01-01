@@ -1,6 +1,5 @@
 package pl.futurecollars.katarzyna.dunaj.model;
 
-
 public enum Vat {
 
     VAT_23(0.23f),

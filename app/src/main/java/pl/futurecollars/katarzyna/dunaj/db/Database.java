@@ -1,6 +1,5 @@
 package pl.futurecollars.katarzyna.dunaj.db;
 
-
 import java.util.List;
 import java.util.UUID;
 import pl.futurecollars.katarzyna.dunaj.model.Invoice;
@@ -16,6 +15,5 @@ public interface Database {
     Invoice update(Invoice updateInvoice);
 
     boolean delete(UUID id);
-
 
 }

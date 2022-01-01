@@ -5,7 +5,7 @@ import java.util.UUID;
 import pl.futurecollars.katarzyna.dunaj.db.Database;
 import pl.futurecollars.katarzyna.dunaj.model.Invoice;
 
-class InvoiceService{
+class InvoiceService {
 
     private final Database database;
 
@@ -13,19 +13,24 @@ class InvoiceService{
         this.database = database;
 
     }
-    public Invoice save (Invoice invoice){
+
+    public Invoice save(Invoice invoice) {
         return database.save(invoice);
 
     }
-    public Invoice getById(UUID id){
+
+    public Invoice getById(UUID id) {
         return database.getById(id);
     }
-    public List<Invoice> getAll(){
+
+    public List<Invoice> getAll() {
         return (List<Invoice>) database.getAll();
     }
-    public Invoice update(Invoice updatedInvoice){
+
+    public Invoice update(Invoice updatedInvoice) {
         return database.update(updatedInvoice);
     }
+
     public boolean delete(UUID id) {
         return database.delete(id);
     }

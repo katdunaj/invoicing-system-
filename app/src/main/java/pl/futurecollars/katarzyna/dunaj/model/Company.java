@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class Company {
+
     private UUID id;
     private long taxIdentificationNumber;
     private String address;
@@ -15,6 +16,5 @@ public class Company {
         this.address = address;
         this.name = name;
     }
-
 }
 
