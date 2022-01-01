@@ -4,7 +4,7 @@ plugins {
     id 'groovy'
     id 'checkstyle'
     id 'jacoco'
-    id 'org.springframework.boot' version '2.5.4'
+    id 'org.springframework.boot' version '2.6.2'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
