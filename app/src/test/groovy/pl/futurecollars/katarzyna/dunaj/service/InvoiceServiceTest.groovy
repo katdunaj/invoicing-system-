@@ -75,7 +75,7 @@ class InvoiceServiceTest extends Specification {
 
         then:
         database.getById(result.getId()) != null
-        database.getById(result.getId()).getFrom().getName() == "NetPlus"
+        database.getById(result.getId()).getFrom().getName() == "Telnet"
     }
 
     def "should delete invoice from database"() {

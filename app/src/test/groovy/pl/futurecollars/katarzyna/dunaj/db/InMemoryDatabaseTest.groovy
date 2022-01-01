@@ -10,7 +10,7 @@ import java.time.LocalDate
 class InMemoryDatabaseTest extends Specification {
 
     def from= new Company(12345,"Ul.Ogrodowa 3, 05-085 Kampinos", "Telnet")
-    def to= new Company(56796,"Ul.Ogrodowa 7, 05-085 Kampinos", "NetPlus")
+    def to= new Company(56796,"Ul.Ogrodowa 7, 05-085 Kampinos", "Telnet")
     def date = LocalDate.of(2021, 05, 05)
     def entries = new ArrayList<InvoiceEntry>()
     def invoice = new Invoice(date, from, to, entries)
@@ -22,7 +22,7 @@ def "should save invoice in to database"() {
 
     then:
     database.getById(result.getId()) != null
-    database.getById(result.getId()).getFrom().getName() == "XXX"
+    database.getById(result.getId()).getFrom().getName() == "Telnet"
 }
 
 def "should get invoice from database by Id"() {
@@ -34,7 +34,7 @@ def "should get invoice from database by Id"() {
 
     then:
     result != null
-    result.getFrom().getName() == "XXX"
+    result.getFrom().getName() == "Telnet"
 }
 
 def "should get list of all invoices from database"() {
