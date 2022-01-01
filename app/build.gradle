@@ -43,7 +43,6 @@ application {
     // Define the main class for the application.
     mainClass = 'pl.futurecollars.katarzyna.dunaj.App'
 }
-
 checkstyle {
     showViolations = true
     ignoreFailures = false
