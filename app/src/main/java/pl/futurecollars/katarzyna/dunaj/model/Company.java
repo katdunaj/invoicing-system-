@@ -1,20 +1,15 @@
 package pl.futurecollars.katarzyna.dunaj.model;
 
 import java.util.UUID;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class Company {
-
     private UUID id;
+    private String name;
     private long taxIdentificationNumber;
     private String address;
-    private String name;
 
-    public Company(long taxIdentificationNumber, String address, String name) {
-        this.taxIdentificationNumber = taxIdentificationNumber;
-        this.address = address;
-        this.name = name;
-    }
 }
-
