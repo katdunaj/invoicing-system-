@@ -12,8 +12,7 @@ public interface Database {
 
     List<Invoice> getAll();
 
-    Invoice update(Invoice updateInvoice);
-
     boolean delete(UUID id);
 
+    Invoice update(Invoice updatedInvoice);
 }
