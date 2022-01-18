@@ -13,5 +13,5 @@ public class Invoice {
     private final LocalDate issuerDate;
     private final Company from;
     private final Company to;
-    private List <InvoiceEntry> invoiceEntries;
+    private List<InvoiceEntry> invoiceEntries;
 }
